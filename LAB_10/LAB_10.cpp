@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 int main()
 {
 
@@ -34,7 +33,6 @@ int main()
         }
     }
 
-   
     cout << "Where u need add new column?";
     cin >> nc;
 
@@ -43,41 +41,30 @@ int main()
         dm2[i][nc - 1] = bm[i];
     }
 
-    
-
-
     for (int i = 0; i < a; i++) {
         for (int j = nc-1; j < b; j++) {
             
             dm2[i][j + 1] = Din_mas[i][j];
 
-        }
-        
+        } 
     }
        
-    
-
-   
-
     for (int i = 0; i < a; i++) {
         for (int j = 0; j < b+1; j++) {
             cout << dm2[i][j] << "\t";
         }
         cout << "\n";
     }
-
-
-
+    
     for (int i = 0; i < a; i++)
     {
         delete[] dm2[i];
     }
+    
     delete[] dm2;
-
-
     for (int i = 0; i < a; i++) {
         delete[] Din_mas[i];
     }
+    
     delete[] Din_mas;
 }
-
